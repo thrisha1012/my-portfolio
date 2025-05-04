@@ -7,110 +7,63 @@ import ServicesItem from "./ServicesItem";
 const Services = () => {
   return (
     <section id="services">
-     
       <Container>
-      <div className={`${classes.hero__content}`}>
-              <SectionSubtitle subtitle=" Skills" />
-              
-              </div><br></br>
+        <div className={`${classes.hero__content}`}>
+          <SectionSubtitle subtitle="Skills" />
+        </div>
+        <br />
+
         <Row>
-          {/* App, Web, Full-Stack Development */}
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="App Development" icon="ri-apps-line" />
-            </div>
+            <ServicesItem title="Java" icon="ri-code-line" />
+          </Col>
+          <Col lg="3" md="4" sm="6">
+            <ServicesItem title="C" icon="ri-code-line" />
+          </Col>
+          <Col lg="3" md="4" sm="6">
+            <ServicesItem title="Python" icon="ri-code-line" />
           </Col>
 
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="Web Development" icon="ri-computer-line" />
-            </div>
+            <ServicesItem title="HTML" icon="ri-html5-line" />
+          </Col>
+          <Col lg="3" md="4" sm="6">
+            <ServicesItem title="CSS" icon="ri-css3-line" />
+          </Col>
+          <Col lg="3" md="4" sm="6">
+            <ServicesItem title="JavaScript" icon="ri-code-s-slash-line" />
           </Col>
 
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="Full-Stack Development" icon="ri-code-s-slash-line" />
-            </div>
+            <ServicesItem title="React" icon="ri-reactjs-line" />
           </Col>
-
-          {/* Individual Programming Languages */}
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="C Programming" icon="ri-code-line" />
-            </div>
+            <ServicesItem title="Vite" icon="ri-flashlight-line" />
           </Col>
-
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="C++ Programming" icon="ri-code-line" />
-            </div>
+            <ServicesItem title="Tailwind CSS" icon="ri-brush-line" />
+          </Col>
+          <Col lg="3" md="4" sm="6">
+            <ServicesItem title="Node.js" icon="ri-node-tree" />
           </Col>
 
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="Java Programming" icon="ri-code-line" />
-            </div>
+            <ServicesItem title="MySQL" icon="ri-database-2-line" />
+          </Col>
+          <Col lg="3" md="4" sm="6">
+            <ServicesItem title="MongoDB" icon="ri-database-line" />
           </Col>
 
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="SQL" icon="ri-database-2-line" />
-            </div>
+            <ServicesItem title="Git" icon="ri-git-branch-line" />
           </Col>
-
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="JavaScript" icon="ri-code-s-slash-line" />
-            </div>
+            <ServicesItem title="Figma" icon="ri-brush-line" />
           </Col>
-
-          {/* React, Node.js, Next.js */}
           <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="React" icon="ri-stack-line" />
-            </div>
-          </Col>
-
-          <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="Node.js" icon="ri-stack-line" />
-            </div>
-          </Col>
-
-          <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="Next.js" icon="ri-stack-line" />
-            </div>
-          </Col>
-
-          {/* MySQL, MongoDB */}
-          <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="MySQL" icon="ri-database-2-line" />
-            </div>
-          </Col>
-
-          <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="MongoDB" icon="ri-database-2-line" />
-            </div>
-          </Col>
-
-          {/* Bootstrap, Figma */}
-          <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="Bootstrap" icon="ri-brush-line" />
-            </div>
-          </Col>
-
-          <Col lg="3" md="4" sm="6">
-            <div className={`${classes.service__box}`}>
-              <ServicesItem title="Figma" icon="ri-brush-line" />
-            </div>
+            <ServicesItem title="VS Code" icon="ri-code-box-line" />
           </Col>
         </Row>
-
-        
       </Container>
     </section>
   );

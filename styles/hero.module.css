@@ -1,8 +1,13 @@
 .hero {
   padding-top: 60px !important;
 }
+
+.hero__content h2 {
+  color: white !important; /* Make "I'm THRISHA" white */
+}
+
 .hero__content h5 {
-  color: #808dad;
+  color: #d1d1d1; /* Mild white for subheading text */
   font-weight: 400;
 }
 
@@ -28,7 +33,7 @@
   left: 22%;
   transform: translateY(-50%);
   border-radius: 5px;
-  background: #808dad26;
+  background: white;
   z-index: 10;
 }
 
@@ -53,7 +58,7 @@
   right: -5%;
   padding: 10px 20px;
   border-radius: 5px;
-  background: #808dad26;
+  background: white;
   z-index: 10;
 }
 
@@ -67,22 +72,29 @@
   margin-bottom: 5px;
   font-weight: 400;
   font-size: 0.8rem;
+  color: #d1d1d1; /* Mild white text */
+}
+
+.hero__experience h5 {
+  color: white; /* White for main heading */
 }
 
 .hero__experience span i {
   padding: 5px;
   color: #01d293;
-  background: #808dad70;
+  background: white;
   border-radius: 5px;
 }
 
 @media only screen and (max-width: 992px) {
   .hero__content h2 {
     font-size: 1.5rem !important;
+    color: white;
   }
 
   .hero__content h5 {
     font-size: 1.1rem !important;
+    color: #d1d1d1; /* Mild white for smaller screens */
   }
 
   .hero__img img {
@@ -104,6 +116,7 @@
   .hero__skills span i {
     font-size: 0.7rem;
     margin-bottom: 0;
+    color: #d1d1d1; /* Mild white for smaller text */
   }
 
   .hero__experience {
@@ -113,11 +126,14 @@
 
   .hero__experience h6 {
     font-size: 0.7rem;
+    color: #d1d1d1;
   }
 
   .hero__experience h5 {
     font-size: 0.9rem;
+    color: white;
   }
+
   .hero__experience span i {
     font-size: 0.8rem;
   }
@@ -142,23 +158,23 @@
   .hero__skills {
     display: none;
   }
+
   .hero__experience {
     display: none !important;
   }
 }
 
+/* Styling for Social Media Links */
 .social__links {
   display: flex;
-  margin-top: 30px;
-  align-items: center;
-  column-gap: 1rem;
-  color: #808dad !important;
-  font-size: 1.3rem !important;
-  cursor: pointer;
+  gap: 20px;
 }
 
-@media only screen and (max-width: 768px) {
-  .social__links {
-    margin-bottom: 30px;
-  }
+.social__links a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social__links a:hover {
+  color: #01d293;
 }

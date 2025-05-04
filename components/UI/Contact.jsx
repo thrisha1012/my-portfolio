@@ -2,8 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
 import SectionSubtitle from "./SectionSubtitle";
+import Form from "./Form"; // Importing the Form Component
+
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode, SiHackerrank } from "react-icons/si";
+
 import classes from "../../styles/contact.module.css";
-import Form from "./Form";
 
 const Contact = () => {
   return (
@@ -12,7 +16,9 @@ const Contact = () => {
         <Row>
           <Col lg="6" md="6">
             <SectionSubtitle subtitle="Contact me" />
-            <h3 className="mt-4 mb-4">Contact with me</h3>
+            <h3 className="mt-4 mb-4" style={{ color: "white" }}>
+              Contact with me
+            </h3>
 
             <ul className={`${classes.contact__info__list}`}>
               <li className={`${classes.info__item}`}>
@@ -35,22 +41,27 @@ const Contact = () => {
               </li>
             </ul>
 
-            <div className={`${classes.social__links}`}>
-            <Link href="https://www.linkedin.com/in/yourusername">
-                <i className="ri-linkedin-line"></i>
-              </Link>
-              <Link href="https://github.com/yourusername">
-                <i className="ri-github-line"></i>
-              </Link>
+            <div className={`${classes.social__links} mt-4`}>
+                <Link href="https://github.com/thrisha1012" target="_blank">
+                  <FaGithub size={24} />
+                </Link>
 
-             
+                <Link href="https://www.linkedin.com/in/thrisha-subramanian-a00471259/" target="_blank">
+                  <FaLinkedin size={24} />
+                </Link>
 
-              
-            </div>
+                <Link href="https://www.hackerrank.com/profile/22CSR226ST" target="_blank">
+                  <SiHackerrank size={24} />
+                </Link>
+
+                <Link href="https://leetcode.com/u/22CSR226ST/" target="_blank">
+                  <SiLeetcode size={24} />
+                </Link>
+              </div>
           </Col>
 
           <Col lg="6" md="6">
-            <Form />
+            <Form /> {/* Keep your form here */}
           </Col>
         </Row>
       </Container>

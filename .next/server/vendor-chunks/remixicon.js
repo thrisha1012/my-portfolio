@@ -10,6 +10,16 @@ exports.id = "vendor-chunks/remixicon";
 exports.ids = ["vendor-chunks/remixicon"];
 exports.modules = {
 
+/***/ "(pages-dir-node)/./node_modules/remixicon/fonts/remixicon.css":
+/*!****************************************************!*\
+  !*** ./node_modules/remixicon/fonts/remixicon.css ***!
+  \****************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./node_modules/remixicon/fonts/remixicon.css":
 /*!****************************************************!*\
   !*** ./node_modules/remixicon/fonts/remixicon.css ***!

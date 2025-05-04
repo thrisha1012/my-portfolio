@@ -32,9 +32,18 @@
   margin-top: 30px;
   align-items: center;
   column-gap: 1rem;
-  color: #808dad !important;
+  color: white; /* Ensures icons are white */
   font-size: 1.3rem !important;
   cursor: pointer;
+}
+
+.social__links a {
+  color: white; /* Ensures the links are white */
+  transition: color 0.3s ease; /* Smooth transition effect on hover */
+}
+
+.social__links a:hover {
+  color: #01d293; /* Hover color change to #01d293 */
 }
 
 @media only screen and (max-width: 768px) {

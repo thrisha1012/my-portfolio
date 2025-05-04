@@ -19,7 +19,7 @@ a {
 }
 
 p {
-  color: #808dad;
+  color: rgb(207, 204, 204);
   line-height: 30px;
 }
 h1,
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #fff;
+  color: white;
 }
 
 h2 {
