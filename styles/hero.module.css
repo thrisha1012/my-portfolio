@@ -2,12 +2,13 @@
   padding-top: 60px !important;
 }
 
+/* TEXT */
 .hero__content h2 {
-  color: white !important; /* Make "I'm THRISHA" white */
+  color: white !important;
 }
 
 .hero__content h5 {
-  color: #d1d1d1; /* Mild white for subheading text */
+  color: #d1d1d1;
   font-weight: 400;
 }
 
@@ -15,156 +16,25 @@
   padding-top: 50px;
 }
 
-.hero__img {
-  position: relative;
-  z-index: 9;
+.primary__btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 8px;
+  background: #01d293;
+  color: white !important;
+  font-weight: 500;
+  text-decoration: none !important;  /* ✅ remove underline */
+  transition: background 0.3s ease;
 }
 
-.hero__img img {
-  border-radius: 50px 5px 5px 5px;
+.primary__btn:hover {
+  background: #00b57d;
+  color: white !important;
+  text-decoration: none !important;  /* ✅ keep no underline on hover */
 }
 
-.hero__skills {
-  text-align: left;
-  width: 130px;
-  padding: 10px 20px;
-  position: absolute;
-  top: 50%;
-  left: 22%;
-  transform: translateY(-50%);
-  border-radius: 5px;
-  background: white;
-  z-index: 10;
-}
 
-.hero__skills h6 {
-  background: transparent;
-  color: #fff;
-}
-
-.hero__skills span i {
-  color: #01d293;
-  background: transparent;
-}
-
-.hero__skills span {
-  background: transparent;
-}
-
-.hero__experience {
-  width: 150px;
-  position: absolute;
-  bottom: -10%;
-  right: -5%;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: white;
-  z-index: 10;
-}
-
-.hero__experience span,
-.hero__experience h5,
-.hero__experience h6 {
-  background: transparent !important;
-}
-
-.hero__experience h6 {
-  margin-bottom: 5px;
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: #d1d1d1; /* Mild white text */
-}
-
-.hero__experience h5 {
-  color: white; /* White for main heading */
-}
-
-.hero__experience span i {
-  padding: 5px;
-  color: #01d293;
-  background: white;
-  border-radius: 5px;
-}
-
-@media only screen and (max-width: 992px) {
-  .hero__content h2 {
-    font-size: 1.5rem !important;
-    color: white;
-  }
-
-  .hero__content h5 {
-    font-size: 1.1rem !important;
-    color: #d1d1d1; /* Mild white for smaller screens */
-  }
-
-  .hero__img img {
-    width: 250px !important;
-    height: 250px !important;
-  }
-
-  .hero__content {
-    padding-top: 0;
-  }
-
-  .hero__skills {
-    padding: 10px;
-    width: 90px;
-    left: 5%;
-  }
-
-  .hero__skills h6,
-  .hero__skills span i {
-    font-size: 0.7rem;
-    margin-bottom: 0;
-    color: #d1d1d1; /* Mild white for smaller text */
-  }
-
-  .hero__experience {
-    padding: 10px;
-    width: 115px;
-  }
-
-  .hero__experience h6 {
-    font-size: 0.7rem;
-    color: #d1d1d1;
-  }
-
-  .hero__experience h5 {
-    font-size: 0.9rem;
-    color: white;
-  }
-
-  .hero__experience span i {
-    font-size: 0.8rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .hero__img {
-    text-align: center !important;
-    margin-top: 50px;
-  }
-
-  .hero__skills {
-    left: 15%;
-  }
-
-  .hero__experience {
-    right: 20%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .hero__skills {
-    display: none;
-  }
-
-  .hero__experience {
-    display: none !important;
-  }
-}
-
-/* Styling for Social Media Links */
+/* SOCIAL LINKS */
 .social__links {
   display: flex;
   gap: 20px;
@@ -178,3 +48,58 @@
 .social__links a:hover {
   color: #01d293;
 }
+
+/* HERO IMAGE CONTAINER */
+.hero__img {
+  position: relative;
+  display: inline-block;
+  z-index: 9;
+  text-align: center;
+  transform: translate(180px, -90px); /* moved right & up */
+}
+
+/* HERO IMAGE */
+.hero__img :global(img) {
+  width: 380px;
+  height: 500px;
+  border-radius: 50px 5px 5px 5px;
+  background: none !important;   /* ✅ Remove blue background */
+  display: block;                /* Remove inline gap */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* ORBIT PARTICLES */
+.hero__img::before,
+.hero__img::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #01d293;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(1, 210, 147, 0.8);
+  animation: orbit 6s linear infinite;
+}
+
+.hero__img::after {
+  width: 14px;
+  height: 14px;
+  background: #ffdf6c;
+  box-shadow: 0 0 12px rgba(255, 223, 108, 0.8);
+  animation: orbit 9s linear infinite reverse;
+}
+
+/* ORBIT PATH */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(160px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(160px) rotate(-360deg);
+  }
+}
+
