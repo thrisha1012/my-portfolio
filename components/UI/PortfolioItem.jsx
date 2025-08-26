@@ -1,27 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "../../styles/portfolio-item.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PortfolioItem = (props) => {
-  const { title, img, liveUrl, techStack = [] } = props.item; // Default empty array if no techStack
+  const { title, img, liveUrl, techStack = [] } = props.item;
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
-    <div className={`${classes.portfolio__item}`}>
+    <div className={classes.portfolio__item} data-aos="fade-left">
       <div className="bg-transparent">
         <h6>{title}</h6>
-        {techStack.length > 0 && // Check if techStack is not empty
-          <div className={`${classes.portfolio__techstack}`}>
+        {techStack.length > 0 && (
+          <div className={classes.portfolio__techstack}>
             {techStack.map((item, index) => (
-              <span className={`${classes.portfolio__tech}`} key={index}>
+              <span className={classes.portfolio__tech} key={index}>
                 {item}
               </span>
             ))}
           </div>
-        }
+        )}
       </div>
 
-      <div className={`${classes.portfolio__img}`}>
+      <div className={classes.portfolio__img}>
         <Image alt="portfolio-img" src={img} width="380" height="250" />
       </div>
 

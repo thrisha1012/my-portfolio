@@ -50,16 +50,7 @@ const About = () => {
                 </Col>
               </Row>
 
-              <h5 className="mt-1">Achievements</h5>
-              <p>
-                - Achieved 1st prize in a 24-hour hackathon HackBuzz'24, conducted by the Department of CSE, KEC.
-              </p>
-              <p>
-                - Secured 2nd Place in the Coding Event at Renaissance’23, conducted by the Department of CSE, KEC.
-              </p>
-              <p>
-                - Presented paper on Large Vehicle Proximity Sensor at Government College of Technology, Coimbatore.
-              </p>
+             
             </div>
           </Col>
 
@@ -67,17 +58,47 @@ const About = () => {
           <Col lg="6">
             <div className={classes.about__img__gallery}>
               <div className={classes.about__img__box}>
-                <Image src={img01} alt="about-img-1" layout="responsive" />
+              <Image
+                src={img01}
+                alt="about-img-1"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover", borderRadius: "5px" }}
+              />
+
+
               </div>
               <div className={classes.about__img__box}>
-                <Image src={img02} alt="about-img-2" layout="responsive" />
+                <Image
+                src={img02}
+                alt="about-img-1"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover", borderRadius: "5px" }}
+              />
+
+
               </div>
               <div className={classes.about__img__box}>
-                <Image src={img03} alt="about-img-3" layout="responsive" />
+                <Image
+                  src={img03}
+                  alt="about-img-1"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "cover", borderRadius: "5px" }}
+                />
+
               </div>
-              {/* <div className={classes.about__img__box}>
-                <Image src={img04} alt="about-img-4" layout="responsive" />
-              </div> */}
+              <div className={classes.about__img__box}>
+                    <Image
+                  src={img04}
+                  alt="about-img-1"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "cover", borderRadius: "5px" }}
+                />
+
+              </div>
             </div>
           </Col>
         </Row>

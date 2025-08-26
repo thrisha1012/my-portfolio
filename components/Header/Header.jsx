@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-
 import { Container } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
@@ -17,9 +16,14 @@ const NAV__LINK = [
     path: "#services",
     display: "Skills",
   },
+  
   {
     path: "#portfolio",
     display: "Project",
+  },
+  {
+    path: "#achievements", 
+    display: "Achievements",
   },
   {
     path: "#contact",
@@ -29,7 +33,6 @@ const NAV__LINK = [
 
 const Header = () => {
   const headerRef = useRef(null);
-
   const menuRef = useRef(null);
 
   const headerFunc = () => {
@@ -56,14 +59,14 @@ const Header = () => {
     <header className={`${classes.header}`} ref={headerRef}>
       <Container>
         <div className={`${classes.nav__wrapper}`}>
-          {/* ======== navigation logo ======== */}
+          {/* Logo */}
           <div className={`${classes.logo}`}>
             <h1>
               <span>T</span>hrisha <span>S</span>ubramanian
             </h1>
           </div>
 
-          {/* ========= nav menu =========== */}
+          {/* Navigation Menu */}
           <div
             className={`${classes.navigation}`}
             ref={menuRef}
@@ -78,13 +81,13 @@ const Header = () => {
 
               <div className={`${classes.nav__right}`}>
                 <p className=" d-flex align-items-center gap-2 mb-0">
-                  {" "}
-                  <i className="ri-phone-line"></i> +91 81481 56744{" "}
+                  <i className="ri-phone-line"></i> +91 81481 56744
                 </p>
               </div>
             </div>
           </div>
 
+          {/* Mobile Menu Icon */}
           <span className={`${classes.mobile__menu}`}>
             <i className="ri-menu-line" onClick={toggleMenu}></i>
           </span>
